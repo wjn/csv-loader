@@ -47,17 +47,20 @@ function loadCSV(filename: string, options?: Options): void {
      */
     return row.map((column: any, index: number) => {
       /**
-       * Process converters passed in the options object
+       * If value is numeric, prefer the number rather than string
+       */
+      const result = parseFloat(column);
+      column = _.isNaN(result) ? column : result;
+
+      /**
+       * Process converters passed in the options object. Can handle
+       * multiple converters. Resets the column value based on callback provided.
        */
       if (options.converters[headers[index]]) {
         const converted = options.converters[headers[index]](column);
-        return _.isNaN(converted) ? column : converted;
+        column = _.isNaN(converted) ? column : converted;
       }
-      /**
-       * If value is numeric, return the number rather than string
-       */
-      const result = parseFloat(column);
-      return _.isNaN(result) ? column : result;
+      return column;
     });
   });
 
@@ -67,5 +70,6 @@ function loadCSV(filename: string, options?: Options): void {
 loadCSV('./data/data.csv', {
   converters: {
     passed: (val) => (val === 'TRUE' ? 'yes' : 'no'),
+    height: (val) => val + 1.01,
   },
 });
