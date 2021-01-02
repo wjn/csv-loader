@@ -1,0 +1,27 @@
+{
+  "name": "csv-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wjn/csv-loader.git"
+  },
+  "keywords": [
+    "data",
+    "csv"
+  ],
+  "author": "Will Nielsen",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/wjn/csv-loader/issues"
+  },
+  "homepage": "https://github.com/wjn/csv-loader#readme",
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "shuffle-seed": "^1.1.6"
+  }
+}
