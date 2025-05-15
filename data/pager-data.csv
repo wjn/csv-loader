@@ -1,0 +1,256 @@
+Date,Time (PDT),Duration,Team Member,Cell,Category,Self-Resolved,False Alarm,Slack,JIRA,Upboard,ER Link,Severity,Team Responsible,Retro Doc,Comments
+ Mon  11-Jan-21,7:40,0:30,Derek Roller,us-silly-maxwell,SubQuery Timeouts,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1610466045041800,,,,,Dirac Platform,,ML Fury. worker count is very high. need to consider a high-compute cell here
+ Mon  11-Jan-21,13:55,0:10,Karl Schumaker,us-romantic-raman,Insert Worker Lag,Yes,Yes,https://newrelic.slack.com/archives/CLYGH35M0/p1610402118036300,,,,,Dirac Core,,alerting policies for a destroyed cell had not been deleted. (runbook?)
+ Mon  11-Jan-21,13:18,0:10,Derek Roller,us-romantic-raman,Insert Worker Lag,Yes,Yes,https://newrelic.slack.com/archives/CLYGH35M0/p1610399912035700,,,,,Dirac Core,,false alarm due to decommissioning 
+ Mon  11-Jan-21,11:45,0:30,Derek Roller,us-silly-maxwell,SubQuery Timeouts,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1610394353019200,,,,,Dirac Platform,,silly-maxwell (ML) continues to run hot. Stutz thinks it needs to be a high compute cell
+ Sat  09-Jan-21,14:55,0:30,Ben Gawel,us-jolly-beard,Disk Utilization,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1610232950012300,,,https://newrelic.slack.com/archives/C0STV9GSU/p1610233121084900,sev5,Dirac Platform,,jolly-beard cell drain had different sized cells where the receiving cell was too small
+ Fri  08-Jan-21,18:56,1:30,Ben Gawel,production,Event Retention,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1610160960003000,,,https://newrelic.slack.com/archives/C0STV9GSU/p1610161804442100,sev5,Dirac Platform,,AUR / ERS / IUR connections causing errors
+ Thu  07-Jan-21,6:31,1:00,Ben Gawel,us-large-piano,IRS Error Rate,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1610073097494000,,,https://newrelic.slack.com/archives/C0STV9GSU/p1610073526211100,sev4,Dirac QUEX,,AWS Network errors causing uptick in errors in the DRL due to queries against Dirac not returning results (for at least the last 7 days).
+ Wed  06-Jan-21,15:18,0:15,Zac Duncan,us-large-piano,Insert Worker Lag,Yes,No,https://newrelic.slack.com/archives/CLYGH35M0/p1609975080447300,,,,,KPT,,This is a result of the CLM-10 partition still needing to be fixed from the issue early Wed morning 1/6
+ Wed  06-Jan-21,12:53,0:30,Zac Duncan,us-silly-maxwell,Dirac Router,Yes,No,https://newrelic.slack.com/archives/CLYGH35M0/p1609966437440700,,,,,Dirac Core,,spike in router errors that have receded. also query SLO.
+ Wed  06-Jan-21,10:19,0:30,Zac Duncan,production,Dirac Router,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1609957158438000,,,,,Dirac Platform,,Same high error rate ostensibly before Sam could stop the rolling in prod
+ Wed  06-Jan-21,10:08,0:30,Zac Duncan,production,Dirac Router,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1609956539433200,,,,,Dirac Platform,,pushing of archive files was not happening correctly when rolling servers in production (sam)
+ Wed  06-Jan-21,0:25,1:30,Ben Gawel,us-large-piano,Kafka Consumer Lag,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1609921533430200,,,https://newrelic.slack.com/archives/C0STV9GSU/p1609922541364900,sev5,KPT,,KPT issue with CLM-10 : sporadic lag events since 1/4. KPT 
+ Tue  05-Jan-21,3:47,0:30:00,Ben Gawel,EU production,Worker Registry,No,Yes,https://newrelic.slack.com/archives/CLYGH35M0/p1609847274421500,,,,,ELB,,The ongoing networking troubles there seem like a likely candidate for the spike in errors that caused the page
+ Mon  04-Jan-21,16:12,0:30:00,Ben Gawel,us-healthy-honey,IRS Error Rate,Yes,Yes,https://newrelic.slack.com/archives/CLYGH35M0/p1609805559415400,,,,,Dirac Core,,"Deployed latest IRS to all cells, solved false error and completed the migration of AEB -> PEB"
+ Mon  04-Jan-21,19:50,0:30:00,Ben Gawel,us-jolly-beard,Insert Worker Error,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1609818626420700,,,https://newrelic.slack.com/archives/C0STV9GSU/p1609818239109800,sev3,Ingest,,drop off in browser ingest in us-jolly-beard
+ Mon  04-Jan-21,18:04,0:30:00,Ben Gawel,us-mad-grass,Insert Worker Error,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1609813221420000,,,https://newrelic.slack.com/archives/C0STV9GSU/p1609812495064500,sev4,Ingest,,lag across all partitions of CEC in us-mad-grass
+ Mon  04-Jan-21,16:01,0:30:00,Ben Gawel,us-pure-night,Insert Worker Error,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1609804873414500,,,https://newrelic.slack.com/archives/C0STV9GSU/p1609804309467400,sev3,Ingest,,seeing ingest drop in us-pure-night for browser traffic + vortex ingest lag
+ Sun  03-Jan-21,21:49,0:30:00,Zack Owens,us-large-piano,IRS Error Rate,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1609739390411700,,,https://newrelic.slack.com/archives/C0STV9GSU/p1609737304357900,sev3,ELB,,Network related ER
+ Thu  31-Dec-20,16:30,0:30:00,Zac Duncan,production,Disk Utilization,No,Yes,https://newrelic.slack.com/archives/CLYGH35M0/p1609374641405900,,,,,,,alerting on volumes that are irrelevant like `/usr`
+ Thu  17-Dec-20,9:08,0:30:00,Sam Bock,us-great-wu,Query Errors,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1608224932271400,,11502,https://newrelic.slack.com/archives/C0STV9GSU/p1608225063412100,sev4,,,LQW 38 does appear to be up and running in wu
+ Thu  17-Dec-20,11:42,0:30:00,Sam Bock,us-pensive-borg,IRS Error Rate,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1608234172275100,,11507,https://newrelic.slack.com/archives/C10R2M1KQ/p1608233809449600,sev4,,,routers are not able to find LQW
+ Thu  17-Dec-20,9:10,0:30:00,Sam Bock,us-tiny-ghost,Insert Worker Error,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1608225007272300,,11502,https://newrelic.slack.com/archives/C0STV9GSU/p1608225063412099,sev4,,,LQW 38 does appear to be up and running in wu
+ Wed  16-Dec-20,7:46,0:30:00,Sam Bock,EU production,Insert Worker Error,Yes,Yes,https://newrelic.slack.com/archives/CLYGH35M0/p1608133563248200,,,,,,,Regular false alert on EU Prod for IW count
+ Wed  16-Dec-20,6:20,1:00:00,Sam Bock,us-eager-newton,Dirac Admin Errors,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1608128446244200,,,https://newrelic.slack.com/archives/C10R2M1KQ/p1608131093231900,sev5,,,Networking issues
+ Wed  16-Dec-20,7:46,0:30:00,Sam Bock,us-mad-king,Insert Worker Lag,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1608133614249800,,,,,,,partition throttled
+ Wed  16-Dec-20,5:29,0:30:00,Sam Bock,us-tiny-ghost,Live Query Worker,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1608125385241700,,,,,,,"""kublet death spiral"" when autorecovery running successfully"
+ Tue  15-Dec-20,12:22,0:10:00,Sam Bock,production,Production Query SLO,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1608064856234700,,,,,,,
+ Tue  15-Dec-20,12:18,0:15:00,Sam Bock,production,Live Query Worker,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1608063500232800,,,,,,,related to a host restart we had to do for DCOPS to deal with some hardware
+ Tue  15-Dec-20,22:34,0:30:00,Sam Bock,us-practical-shaw,Ingest Lag,Yes,No,https://newrelic.slack.com/archives/CLYGH35M0/p1608100490239700,,,,,,,Need to adjust lag thresholds
+ Mon  14-Dec-20,10:38,0:30:00,Sam Bock,us-mad-king,Insert Worker Lag,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1607971120218800,,,https://newrelic.slack.com/archives/C0STV9GSU/p1607970355079600,sev4,,,"Kafka is ""very unhappy"""
+ Mon  14-Dec-20,11:29,0:15:00,Sam Bock,us-pure-night,IRS Error Rate,Yes,No,https://newrelic.slack.com/archives/CLYGH35M0/p1607974173226500,,,,,,,Quick self-recovery
+ Mon  14-Dec-20,11:26,0:15:00,Sam Bock,us-pure-night,Insert Worker Lag,Yes,No,https://newrelic.slack.com/archives/CLYGH35M0/p1607974014225800,,,,,,,Traffic shifts of large accounts
+ Mon  14-Dec-20,10:46,0:15:00,Sam Bock,us-pure-night,IRS Error Rate,Yes,No,https://newrelic.slack.com/archives/CLYGH35M0/p1607971565220900,,,,,,,"Lots of new accounts, cache had to be built up"
+ Sat  12-Dec-20,11:01,0:30:00,Ben Gawel,us-mad-king,Disk Utilization,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1607799684213600,,,https://newrelic.slack.com/archives/C0STV9GSU/p1607800239429600,sev5,,,Node status events reporting mismatch
+ Fri  11-Dec-20,16:42,0:30:00,Zac Duncan,production,Disk Utilization,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1607733760199100,,,,,,,
+ Fri  11-Dec-20,12:54,0:30:00,Zac Duncan,us-eager-newton,IRS Error Rate,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1607720080161000,,,https://newrelic.slack.com/archives/C10R2M1KQ/p1607722649177700,sev5,,,IP exhaustion
+ Fri  11-Dec-20,12:39,0:30:00,Zac Duncan,us-huge-sugar,Disk Utilization,No,Yes,https://newrelic.slack.com/archives/CLYGH35M0/p1607719190159500,,,,,,,PLATS was working on pre-fetching workers in that cell
+ Fri  11-Dec-20,17:25,0:30:00,Jimar Miller,us-nice-eye,Disk Utilization,No,Yes,https://newrelic.slack.com/archives/CLYGH35M0/p1607736319205600,,,,,,,Plats was decomming the cell
+ Fri  11-Dec-20,7:42,1:00:00,Zac Duncan,us-nice-eye,Disk Utilization,No,No,,,,https://newrelic.slack.com/archives/C0STV9GSU/p1607701347171800,sev4,,,Manually paged Zac
+ Fri  11-Dec-20,6:57,0:30:00,Zac Duncan,us-nice-eye,Disk Utilization,No,No,,,,https://newrelic.slack.com/archives/CLYGH35M0/p1607704415158400,sev4,,,Created an ER after manually noticing 100% utilization
+ Fri  11-Dec-20,17:44,0:30:00,Jimar Miller,us-silly-maxwell,Tenant Usage System,No,No,https://newrelic.slack.com/archives/CLYGH35M0/p1607737492210000,,,https://newrelic.slack.com/archives/C0STV9GSU/p1607727962340500,sev4,,,IP exhaustion
+ Thu  10-Dec-20,14:13,0:30:00,Zac Duncan,EU production,Insert Worker Error,Yes,Yes,https://newrelic.slack.com/archives/CLYGH35M0/p1607638432147900,,,,,,,ongoing F5 networking issue
+ Thu  10-Dec-20,15:19,0:30:00,Zac Duncan,production,Dirac Router,Yes,Yes,https://newrelic.slack.com/archives/CLYGH35M0/p1607642346151200,,,,,,,false alarm
+ Thu  10-Dec-20,14:12,0:30:00,Zac Duncan,us-inner-gold,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1607638338147400,,,,,,,
+ Wed  09-Dec-20,9:03,0:30:00,Jimar Miller,us-every-rain,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1607533408141600,,,,,,,spike
+ Wed  09-Dec-20,14:41,0:30:00,Zack Owens,us-musing-saha,High File Finish Queue,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1607553692144400,,,,,,,High volume from Verizon
+ Wed  09-Dec-20,10:31,0:30:00,Zack Owens,us-peaceful-gauss (staging),Ingest Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1607538711142500,,,https://newrelic.slack.com/archives/C0TPJ6P19/p1607538767000400,sev5,,,
+ Tue  08-Dec-20,9:59,0:30:00,Jimar Miller,EU production,Insert Worker Error,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1607450370121600,,,https://newrelic.slack.com/archives/C0STV9GSU/p1607450567018700,sev5,,,false page
+ Tue  08-Dec-20,17:40,0:30:00,Jimar Miller,staging,Disk Utilization,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1607478075131900,,,,,,,Jimar calibrated alert so the false alerting would stop
+ Tue  08-Dec-20,17:12,0:30:00,Jimar Miller,us-pensive-borg,IRS Error Rate,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1607476343125500,,,,,,,possibly IP exhaustion
+ Tue  08-Dec-20,15:13,0:30:00,Jimar Miller,us-silly-maxwell,IRS Error Rate,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1607469196123400,,,https://newrelic.slack.com/archives/C0STV9GSU/p1607469286082200,sev4,,,missing NTUS because of IP exhaustion
+ Sat  05-Dec-20,6:56,0:10:00,Zac Duncan,us-eager-newton,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1607180163113600,,,,,,,false alarm
+ Sat  05-Dec-20,10:36,0:10:00,Zac Duncan,us-large-piano,Insert Worker Lag,Yes,,,,,,,,,false alarm
+ Sat  05-Dec-20,9:24,0:10:00,Zac Duncan,us-large-piano,Insert Worker Lag,Yes,,,,,,,,,false alarm
+ Sat  05-Dec-20,7:19,0:10:00,Zac Duncan,us-mad-grass,Insert Worker Error,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1607181598115500,,,,sev3,,,kafka timeouts on usage_data_platform
+ Sat  05-Dec-20,7:19,0:10:00,Zac Duncan,us-serene-lalande,Insert Worker Error,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1607181598115500,,,,sev3,,,kafka timeouts on usage_data_platform
+ Fri  04-Dec-20,14:50,0:10:00,Karl Schumaker,us-large-piano,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1607122241112300,,,,,,,
+ Thu  03-Dec-20,3:52,4:00:00,Zac Duncan,staging,Jetty Threadpool Exhaustion,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1606995154090600,,,,,,,
+ Wed  02-Dec-20,12:17,1:00:00,Karl Schumaker,production,Production Query SLO,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1606940256088400,,,https://newrelic.slack.com/archives/C0STV9GSU/p1606940422229000,sev2,,,
+ Wed  02-Dec-20,16:15,1:00:00,Zack Owens,production,Jetty Threadpool Exhaustion,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1606954556089800,,,https://newrelic.slack.com/archives/C10R2M1KQ/p1606954467023700,sev4,,,
+ Tue  01-Dec-20,5:08,0:30:00,Zac Duncan,EU production,Node Count,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1606829532084100,,,,,,,False alarm
+ Tue  01-Dec-20,15:30,0:05:00,Karl Schumaker,production,Insert Worker Error,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1606865416086500,,,,,,,result from spreading new account across all partitions
+ Tue  01-Dec-20,19:21,1:00:00,Zac Duncan,us-hungry-driscoll,Kafka Consumer Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1606879265087200,,,,,,,
+ Mon  30-Nov-20,13:13,0:05:00,Karl Schumaker,EU production,Dirac Entitlements,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p16067708110824000,,,,,,,
+ Mon  23-Nov-20,9:03,1:15:00,Zack Owens,us-huge-sugar,Disk Utilization,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1606151027029800,,,,,,,
+ Sat  21-Nov-20,23:48,1:00:00,Jimar Miller,us-huge-sugar,Disk Utilization,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1606031330023600,,,,,,,
+ Fri  20-Nov-20,19:20,1:20:00,Ben Gawel,staging,Insert Worker Error,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605928850022200,,11268,https://newrelic.slack.com/archives/C0STV9GSU/p1605928897012900,sev2,,,Cloudflare incident???
+ Fri  20-Nov-20,11:40,0:15:00,Karl Schumaker,us-musing-saha,Insert Worker Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605901230019900,,11262,https://newrelic.slack.com/archives/C0STV9GSU/p1605901950472200,sev5,,,Epic account scaled from 3IW to 7IW
+ Thu  19-Nov-20,17:08,0:30:00,Ben Gawel,staging,Disk Utilization,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605834491012400,,,,,,,false alert
+ Wed  18-Nov-20,19:51,0:05:00,Ben Gawel,us-serene-lalande,IRS Error Rate,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605757900004400,,,https://newrelic.slack.com/archives/C0STV9GSU/p1605757795278700,sev4,,,same er
+ Wed  18-Nov-20,19:47,0:15:00,Ben Gawel,us-serene-lalande,Insert Worker Error,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605757666003700,,,https://newrelic.slack.com/archives/C0STV9GSU/p1605757795278700,sev4,,,ben wants to adjust alerting
+ Mon  16-Nov-20,2:47,0:05:00,Caleb Piekstra,us-silly-maxwell,Jetty Threadpool Exhaustion,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1605523677484300,,,,,,,self resolved
+ Mon  16-Nov-20,0:06,0:15:00,Caleb Piekstra,us-silly-maxwell,Jetty Threadpool Exhaustion,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605514011480700,,,,,,,result from the host deleted from the prior page
+ Sun  15-Nov-20,0:32,0:05:00,Caleb Piekstra,staging,Event Retention,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1605429149472300,,,,,,,
+ Sun  15-Nov-20,23:12,0:30:00,Caleb Piekstra,us-silly-maxwell,SubQuery Timeouts,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605510721473000,,,,,,,k8s issue
+ Sat  14-Nov-20,22:01,0:05:00,Caleb Piekstra,production,Insert Worker Error,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605420079462600,,,https://newrelic.slack.com/archives/C0STV9GSU/p1605420015286400,sev1,,,Ongoing ER DNS
+ Sat  14-Nov-20,9:59,0:30:00,Caleb Piekstra,production,Insert Worker Error,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605419986462400,,,https://newrelic.slack.com/archives/C0STV9GSU/p1605364398187000,sev3,,,Ongoing ER DNS
+ Sat  14-Nov-20,22:51,0:05:00,Caleb Piekstra,staging,Event Retention,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605423070469800,,,https://newrelic.slack.com/archives/C0STV9GSU/p1605423119373800,sev1,,,
+ Sat  14-Nov-20,22:22,0:05:00,Caleb Piekstra,staging,Insert Worker Error,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605421376464400,,,,sev1,,,
+ Sat  14-Nov-20,22:19,0:05:00,Caleb Piekstra,staging,Event Retention,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605421172463800,,,,sev1,,,Ongoing ER DNS
+ Sat  14-Nov-20,6:32,0:30:00,Caleb Piekstra,staging,Insert Worker Error,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605364375457700,,,https://newrelic.slack.com/archives/C0STV9GSU/p1605364398187000,sev3,,,Ongoing ER DNS
+ Fri  13-Nov-20,14:15,0:15:00,Karl Schumaker,EU production,Production Query SLO,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1605305707425700,,,,,,,same thing
+ Fri  13-Nov-20,13:35,0:10,Caleb Piekstra,EU production,Production Query SLO,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1605303330422100,,,,,,,manual alert suppression had been removed.
+ Fri  13-Nov-20,20:50,2:00:00,Caleb Piekstra,multiple,IRS Error Rate,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605329523446200,,11200,https://newrelic.slack.com/archives/C0STV9GSU/p1605329529046400,sev5,,,different releases of NTUS and IRS in different cells
+ Fri  13-Nov-20,23:55,0:05:00,Caleb Piekstra,us-eager-newton,Tenant Usage System,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1605340519452900,,,,,,,duplicate alerts reset alert threshold
+ Fri  13-Nov-20,20:16,0:15:00,Caleb Piekstra,us-eager-newton,Kafka Consumer Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1605327375438600,,,,,,,mysterious spike that Caleb wanted to follow up with
+ Fri  13-Nov-20,20:05,0:10:00,Caleb Piekstra,us-eager-newton,Kafka Consumer Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1605326710431500,,,,,,,
+ Fri  13-Nov-20,4:38,0:10:00,Zack Owens,us-eager-newton,IRS Error Rate,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605271093420400,,,,,,,redeploying NTUS in all cells solved the issue
+ Fri  13-Nov-20,19:55,0:20:00,Caleb Piekstra,us-romantic-raman,IRS Error Rate,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605326132427800,,,,,,,updating IRS in raman to release-300 which looks to be the latest version
+ Fri  13-Nov-20,15:19,0:05:00,Karl Schumaker,us-romantic-raman,Kafka Consumer Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1605309582427300,,,,,,,
+ Thu  12-Nov-20,9:59,,,us-hungry-driscoll,Insert Route Service,,,https://newrelic.slack.com/archives/CLYGH35M0/p1605203965402400,,,https://newrelic.slack.com/archives/C10R9P8NB/p1605204078041100,sev5,,,
+ Thu  12-Nov-20,20:43,,Caleb Piekstra,us-mad-grass,Kafka Consumer Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605249784419700,,11172,https://newrelic.slack.com/archives/C0STV9GSU/p1605249764154600,sev3,,,Account not spread in IRS after move
+ Thu  12-Nov-20,21:29,,Caleb Piekstra,us-mad-grass,Kafka Consumer Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605245389415400,,11172,https://newrelic.slack.com/archives/C0STV9GSU/p1605245483061300,sev3,,,
+ Thu  12-Nov-20,10:48,,,us-musing-saha,Kafka Consumer Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605206895413300,,,,,,,
+ Wed  11-Nov-20,1:16,0:20:00,,EU production,Production Query SLO,Yes,,https://one.eu.newrelic.com/launcher/nrai.launcher?pane=eyJuZXJkbGV0SWQiOiJhbGVydGluZy11aS1jbGFzc2ljLmluY2lkZW50cyIsIm5hdiI6IkluY2lkZW50cyIsImluY2lkZW50SWQiOiI5MDI4NTgxIn0=&sidebars[0]=eyJuZXJkbGV0SWQiOiJucmFpLm5hdmlnYXRpb24tYmFyIiwibmF2IjoiSW5jaWRlbnRzIn0=&platform[accountId]=1924897&platform[timeRange][duration]=604800000&platform[$isFallbackTimeRange]=true,,,,,,,Same as Caleb's issue. I followed up with Pep in their help channel.
+ Wed  11-Nov-20,7:08,1:00:00,,production,Insert Worker Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605107303394100,,11151,https://newrelic.slack.com/archives/C0STV9GSU/p1605107435422900,sev1,,,
+ Wed  11-Nov-20,3:24,1:00:00,,production,Dirac Router,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605093897392800,,11151,https://newrelic.slack.com/archives/C0STV9GSU/p1605094054296400,sev1,,,ER caused loss of monitoring data which caused false alert
+ Wed  11-Nov-20,2:54,1:00:00,,production,Insert Worker Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605092099392200,,11151,https://newrelic.slack.com/archives/C0STV9GSU/p1605091138250400,sev1,,,Result of RIOT sending poisoned queries.
+ Tue  10-Nov-20,17:31,0:05:00,,us-eager-newton,Insert Worker Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605058269388900,,11147,https://newrelic.slack.com/archives/C0STV9GSU/p1605057158467300,sev3,,,Kafka partition
+ Tue  10-Nov-20,21:08,1:00:00,,us-hungry-driscoll,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1605071329389500,,11147,https://newrelic.slack.com/archives/C0STV9GSU/p1605071482120200,sev3,,,eager newton
+ Tue  10-Nov-20,7:05,0:05:00,,us-pensive-borg,Insert Worker Error,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1605020719376000,,,,,,,Alert caused because of scale up from previous alert
+ Tue  10-Nov-20,6:20,1:00:00,,us-pensive-borg,Kafka Consumer Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1605018036351700,,,,,,,"deserialization staying up at 100%, scaled the cell up"
+ Mon  09-Nov-20,23:50,1:30:00,,EU production,Production Query SLO,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1604994647346700,,11135,https://newrelic.slack.com/archives/C0STV9GSU/p1604995051263500,sev4,,,Beyond EU 100% of Metric queries failing
+ Sun  08-Nov-20,20:11,0:05:00,,us-musing-saha,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1604895070343700,,,,,,,Metrics Team Load testing account 2840278
+ Fri  06-Nov-20,9:06,0:05:00,,us-musing-saha,Ingest Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1604682414340200,,,,,,,Load Testing for a couple different accounts
+ Fri  06-Nov-20,11:25,0:05:00,,us-peaceful-gauss (staging),Jetty Threadpool Exhaustion,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1604690700341400,,,,,,,restarted the pod
+ Thu  05-Nov-20,17:25,0:05:00,,production,Insert Worker Error,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1604625950336200,,,,,,,false alert
+ Thu  05-Nov-20,7:50,0:30:00,,staging,Disk Utilization,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1604591442327900,,,,,,,"""Good ole chi-staging-dirac-32wkcp2.nr-ops.net"""
+ Thu  05-Nov-20,4:35,0:05:00,,us-great-wu,Kafka Consumer Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1604579739326500,,,,,,,
+ Thu  05-Nov-20,14:56,0:10:00,,us-old-dream,Jetty Threadpool Exhaustion,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1604616960333900,,,,,,,deployment related
+ Wed  04-Nov-20,14:15,0:05:00,,staging,Jetty Threadpool Exhaustion,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1604528158325300,,,,,,,"staging router ""looks borked"""
+ Wed  04-Nov-20,12:12,0:05:00,,staging,Disk Utilization,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1604520777323300,,,,,,,
+ Wed  04-Nov-20,3:02,1:00:00,,us-silly-maxwell,SubQuery Timeouts,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1604487771315800,,,,,,,Bad queries from ML FURY
+ Tue  03-Nov-20,11:25,0:02:00,,production,Dirac Router,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1604431538305700,,,,,,,Plats was decomming a cell
+ Tue  03-Nov-20,21:02,0:10:00,,us-musing-saha,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1604466149313300,,,https://newrelic.slack.com/archives/C0STV9GSU/p1604464728168300,,,,major spike in logging ingress in us-serene-lalande leading to lag and kafka broker near-saturation
+ Tue  03-Nov-20,10:40,0:10:00,,us-peaceful-gauss (staging),Jetty Threadpool Exhaustion,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1604428810303800,,,,,,,Unclear what the issue is
+ Tue  03-Nov-20,16:24,0:45:00,,us-silly-maxwell,SubQuery Timeouts,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1604449495308500,,,,,,,ML Fury spike (acct 989586)
+ Mon  02-Nov-20,14:46,0:40:00,,staging,Disk Utilization,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1604364415301200,,,,,,,
+ Mon  02-Nov-20,14:27,0:10:00,,us-eager-newton,Jetty Threadpool Exhaustion,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1604356038298700,,,,,,,Zack owens working with Jimar on ths
+ Mon  02-Nov-20,10:35,0:30:00,,us-peaceful-gauss (staging),Disk Utilization,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1604342104290000,,,,,,,
+ Fri  30-Oct-20,0:51,,,production,"Manual Page (e.g., from ER)",No,,https://newrelic.slack.com/archives/CFXLDR0GJ/p1603984899104800,,,https://newrelic.slack.com/archives/C0STV9GSU/p1604043968205400,sev1,,,Increased HTTP 522 Errors Cloudflare
+ Fri  30-Oct-20,13:23,0:05:00,,staging,Event Retention,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1604089393288600,,,,,,,Looks like caused by something Caleb was working on.
+ Thu  29-Oct-20,8:49,1:00:00,,production,"Manual Page (e.g., from ER)",No,,https://newrelic.slack.com/archives/CLYGH35M0/p1603986590284900,,,https://newrelic.slack.com/archives/CFXLDR0GJ/p1603984899104800,sev5,,,Missing IUR data in report
+ Wed  28-Oct-20,9:58,0:05:00,,EU production,Event Retention,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1603904332259600,,,,,,,
+ Wed  28-Oct-20,17:09,0:05:00,,production,Event Retention,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1603930174273300,,,,sev1,,,ongoing unrelated ER
+ Wed  28-Oct-20,14:35,,,production,Jetty Threadpool Exhaustion,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1603920956264000,,11030,https://newrelic.slack.com/archives/C0STV9GSU/p1603921104088100,sev5,,,restarting a QW solved the prob
+ Wed  28-Oct-20,18:48,0:05:00,,staging,Kafka Consumer Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1603936121282200,,,,sev1,,,Same staging Kafka ER
+ Wed  28-Oct-20,9:42,0:05:00,,staging,Low Host Count (Usage),Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1603903322259000,,,,,,,Result of release Caleb was doing
+ Wed  28-Oct-20,17:21,0:05:00,,us-pensive-borg,Insert Worker Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1603930892276200,,,,sev1,,,Staging Kafka lost and restored caused tons of false alerts
+ Wed  28-Oct-20,12:30,0:05:00,,us-serene-lalande,Kafka Consumer Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1603913416261400,,,,,,,"PEB index 134 running hot, autospreader looks to have handled"
+ Wed  28-Oct-20,12:08,0:05:00,,us-tiny-ghost,High File Finish Queue,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1603912081260800,,,,,,,
+ Tue  27-Oct-20,14:42,1:41:00,,staging,Dirac Router,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1603834942250700,,11020,https://newrelic.slack.com/archives/C0TPJ6P19/p1603835017107700,sev3,,,Bad QW Gateway release-417
+ Tue  27-Oct-20,23:20,0:30:00,,us-old-dream,"Manual Page (e.g., from ER)",No,,https://newrelic.slack.com/archives/CLYGH35M0/p1603866035252700,,,https://newrelic.slack.com/archives/C0STV9GSU/p1603864282370200,sev3,,,"root cause was the metrics env vars didn’t get fully deployed, which caused later deploys to crash"
+ Tue  27-Oct-20,11:01,0:05:00,,us-peaceful-gauss (staging),High File Finish Queue,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1603821765250000,,,,,,,RElated to game day
+ Tue  27-Oct-20,8:06,0:05:00,,us-practical-shaw,Insert Worker Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1603811208248800,,,,,,,Unrelated ER
+ Tue  27-Oct-20,7:09,0:03:00,,us-practical-shaw,Insert Worker Error,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1603807771248100,,,,,,,Unrelated ER
+ Mon  26-Oct-20,1:31,0:13:00,,us-great-wu,SubQuery Timeouts,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1603701077244000,,,,,,,"got slammed for a minute, then passed."
+ Mon  26-Oct-20,10:31,0:37:00,,us-peaceful-gauss (staging),High File Finish Queue,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1603733514244700,,11001,https://newrelic.slack.com/archives/C0TPJ6P19/p1603734960073200,sev5,,,
+ Fri  23-Oct-20,6:03,1:02:00,,us-hungry-driscoll,Jetty Threadpool Exhaustion,No,,,,10979,https://newrelic.slack.com/archives/C10R2M1KQ/p1603458179380300,sev3,,,Verizon
+ Fri  23-Oct-20,5:53,1:15:00,,us-hungry-driscoll,Jetty Threadpool Exhaustion,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1603457589237500,,10979,https://newrelic.slack.com/archives/C10R2M1KQ/p1603458179380300,sev3,,,Verizon
+ Fri  23-Oct-20,15:23,0:15:00,,us-peaceful-gauss (staging),High File Finish Queue,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1603491820240600,,,,,,,Cam and Karl had IRS to staging that may have caused this page
+ Thu  22-Oct-20,12:24,1:05:00,,staging,Insert Worker Error,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1603394642232600,,,https://newrelic.slack.com/archives/C0TPJ6P19,,,,
+ Thu  22-Oct-20,15:21,0:02:00,,us-hardcore-hopper,Jetty Threadpool Exhaustion,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1603405312235900,,,,,,,
+ Thu  22-Oct-20,5:11,0:10:00,,us-hungry-driscoll,Query Worker Back Pressure,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1603368663213600,,,,,,,Verizon again
+ Thu  22-Oct-20,7:23,0:40:00,,us-silly-maxwell,Query Worker Back Pressure,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1603376636215400,,,,,,,
+ Wed  21-Oct-20,11:35,0:10:00,,us-hungry-driscoll,Query Errors,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1603348549209500,,,,,,,Driscoll at current size isn't keeping up with Verizon at its peak.
+ Wed  21-Oct-20,12:17,0:02:00,,us-peaceful-gauss (staging),Insert Route Service,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1603264641207900,,,,,,,
+ Tue  20-Oct-20,7:56,,,us-silly-maxwell,SubQuery Timeouts,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1603205818198400,,,https://newrelic.slack.com/archives/C10R2M1KQ/p1603206174343000,,,,
+ Mon  19-Oct-20,20:18,0:54:00,,production,Live Query Worker,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1603163310185800,,10943,https://newrelic.slack.com/archives/CLYGH35M0/p1603153788184100,,,,acct 1562951
+ Mon  19-Oct-20,11:18,0:20:00,,production,Jetty Threadpool Exhaustion,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1603131526181700,,10936,https://newrelic.slack.com/archives/CLYGH35M0/p1603131526181700,sev4,,,"20 minutes, single query worker 3052 was shut down and solved issue.
+"
+ Mon  19-Oct-20,17:29,0:09:00,,us-eager-newton,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p16031537881841000,,,,,,,related to ongoing ER
+ Mon  19-Oct-20,10:34,0:05:00,,us-great-wu,SubQuery Timeouts,,,https://newrelic.slack.com/archives/CLYGH35M0/p1603128862181100,,10933,,sev4,,,
+ Fri  16-Oct-20,9:27,0:02:00,,us-hungry-driscoll,Jetty Threadpool Exhaustion,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602865667175500,,,,,,,
+ Fri  16-Oct-20,5:21,1:30:00,,us-hungry-driscoll,Insert Worker Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1602850561174000,,,https://newrelic.slack.com/archives/C0STV9GSU/p1602850866249400,sev3,,,"Verizon iPHone event, sixths sense queries failing, "
+ Thu  15-Oct-20,12:32,0:14:00,,us-practical-shaw,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602790367172400,,,,,,,Single account burst 
+ Wed  14-Oct-20,20:25,0:20:00,,staging,Corrupt Archive Files,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602732327159600,,,https://newrelic.slack.com/archives/C0TPJ6P19/p1602732396171000,sev5,,,QA account with archive file dates from the future which were causing files not to close.
+ Wed  14-Oct-20,1:59,0:11:00,,us-old-dream,SubQuery Timeouts,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602665980153700,,,,,,,
+ Tue  13-Oct-20,12:08,0:03:00,,us-practical-shaw,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602616120152100,,,,,,,
+ Mon  12-Oct-20,14:15,0:03:00,,us-quirky-vaughn (staging),Jetty Threadpool Exhaustion,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602537340148400,,,,,,,
+ Mon  12-Oct-20,11:13,0:02:00,,us-quirky-vaughn (staging),Jetty Threadpool Exhaustion,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602526396146600,,,,,,,
+ Mon  12-Oct-20,17:34,0:03:00,,us-serene-lalande,Insert Worker Error,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1602548500149100,,,,,,,UDS ER
+ Mon  12-Oct-20,17:34,0:03:00,,us-serene-lalande,Insert Worker Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1602548500149100,,,,,,,UDS ER
+ Mon  12-Oct-20,17:21,0:03:00,,us-serene-lalande,Insert Worker Error,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1602548500149100,,,,,,,UDS ER
+ Mon  12-Oct-20,17:21,0:03:00,,us-serene-lalande,Insert Worker Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1602548500149100,,,,,,,UDS ER
+ Mon  12-Oct-20,13:53,0:02:00,,us-sweet-edison,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602535984147900,,,,,,,
+ Fri  09-Oct-20,8:59,1:00:00,,production,Staging Event Retention,,,https://newrelic.slack.com/archives/CLYGH35M0/p1602259188143600,,,,,,,
+ Fri  09-Oct-20,7:39,0:05:00,,us-every-rain,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602254375138900,,,,,,,
+ Fri  09-Oct-20,21:12,0:02:00,,us-hungry-driscoll,Insert Worker Error,No,,none,,,,,,,"Epic Event, Caused incident because data wasn't spread when moved to hungry-driscoll"
+ Fri  09-Oct-20,21:11,0:01:00,,us-hungry-driscoll,Insert Worker Lag,No,,none,,,,,,,
+ Fri  09-Oct-20,5:19,1:15:00,,us-practical-shaw,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602245977136700,,,,,,,Takes about 7 min to spin up another IW in AWS
+ Fri  09-Oct-20,17:03,0:10:00,,us-tiny-ghost,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602288205144100,,,https://newrelic.slack.com/archives/C0STV9GSU/p1602288455139000,sev5,,,"Epic event, Logging had been changed. Self resolved"
+ Thu  08-Oct-20,15:50,0:03:00,,us-hungry-driscoll,Insert Worker Lag,,,https://newrelic.slack.com/archives/CLYGH35M0/p1602197448134300,,,https://newrelic.slack.com/archives/C0STV9GSU/p1602197509493500,,,,
+ Thu  08-Oct-20,17:00,0:05:00,,us-lucid-lewin,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602201652134900,,,,,,,looks like the move of EPIC games caused problems for Lewin
+ Thu  08-Oct-20,12:51,0:10:00,,us-pensive-borg,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602186672132600,,,,,,,Lots of IW issues in Borg today.
+ Thu  08-Oct-20,5:52,0:02:00,,us-pensive-borg,Insert Worker Error,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602161553131400,DC-2103,,,,,,
+ Thu  08-Oct-20,3:35,0:02:00,,us-pensive-borg,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602153309130800,,,,,,,
+ Thu  08-Oct-20,17:00,0:05:00,,us-practical-shaw,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602201652134900,,,,,,,
+ Thu  08-Oct-20,18:36,0:03:00,,us-romantic-raman,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602207415136000,,,,,,,
+ Wed  07-Oct-20,11:52,0:05:00,,us-great-wu,Jetty Threadpool Exhaustion,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602096761127300,DC-2089,,,,,,same as 14:19 incident
+ Wed  07-Oct-20,17:26,0:15:00,,us-peaceful-gauss (staging),Jetty Threadpool Exhaustion,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602116806129000,,,,,,,"Ben thought it was related to KMS, Zac said No"
+ Wed  07-Oct-20,14:32,0:05:00,,us-quirky-vaughn (staging),Jetty Threadpool Exhaustion,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602106377128100,,,,,,,
+ Tue  06-Oct-20,14:19,0:15:00,,us-quirky-vaughn (staging),Jetty Threadpool Exhaustion,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1602019197124100,DC-2089,,,,,,
+ Mon  05-Oct-20,16:26,0:03:00,,us-peaceful-gauss (staging),Low Host Count (Usage),Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1601940376119000,,,,,,,Related to a staging ELB issue
+ Fri  02-Oct-20,14:36,0:05:00,,us-inner-gold,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1601672746110100,,,,,,,
+ Fri  02-Oct-20,14:05,0:41:00,,us-inner-gold,Insert Worker Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1601672746110100,,,,,,,
+ Fri  02-Oct-20,11:45,0:02:00,,us-quirky-vaughn (staging),Insert Worker Error,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1601664355108000,,,,,,,
+ Fri  02-Oct-20,13:21,0:02:00,,us-silly-maxwell,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1601677318113300,,,,,,,
+ Fri  02-Oct-20,12:41,0:08:00,,us-silly-maxwell,Jetty Threadpool Exhaustion,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1601667694108800,,,,,,,
+ Wed  30-Sep-20,8:14,0:03:00,,production,WCT,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1601478883087700,,,,,,,
+ Wed  30-Sep-20,13:20,0:05:00,,us-hardcore-hopper,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1601497251099800,,,,,,,
+ Wed  30-Sep-20,11:05,0:20:00,,us-quirky-vaughn (staging),Jetty Threadpool Exhaustion,,,https://newrelic.slack.com/archives/CLYGH35M0/p1601489205096500,,,,,,,
+ Tue  29-Sep-20,3:08,0:25:00,,production,WCT,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1601374132071300,,,,,,,Acct 2135335 lighting things up
+ Tue  29-Sep-20,14:46,0:03:00,,us-quirky-vaughn (staging),Jetty Threadpool Exhaustion,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1601415963087000,,,,,,,
+ Tue  29-Sep-20,4:58,0:02:00,,us-quirky-vaughn (staging),Insert Worker Error,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1601392532077400,DC-2061,,,,,,
+ Mon  28-Sep-20,12:30,,,us-musing-saha,Insert Worker Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1601321419067700,,,,,,,
+ Mon  28-Sep-20,14:03,0:02:00,,us-tiny-ghost,PEB Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1601327071069100,,,,,,,PEB lag for single partition
+ Fri  25-Sep-20,23:24,0:03:00,,production,Insert Worker Error,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1601101471059200,DC-2057,,,,,,
+ Fri  25-Sep-20,3:21,0:02:00,,us-great-wu,False AIops Alerts,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1601029318047800,,,,,,,
+ Fri  25-Sep-20,0:01,0:02:00,,us-great-wu,Tenant Usage System,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1601017263043000,,,,,,,
+ Fri  25-Sep-20,17:33,0:30:00,,us-old-dream,Insert Worker Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1601650955106300?thread_ts=1601068627.054400&cid=CLYGH35M0,,,,,,,Epic Games. Page wasn't listed in the nrdb-pager room
+ Fri  25-Sep-20,14:17,0:10:00,,us-old-dream,Insert Worker Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1601068627054400,,,,,,,
+ Thu  24-Sep-20,15:44,0:02:00,,production,Production Query SLO,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1600987489034900,,,,,,,shouldn't be paging. Ancestry is simply being rate limited
+ Thu  24-Sep-20,11:22,0:20:00,,production,Production Query SLO,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1600971761017100,,,,,,,production decom causing alerts due to DRL
+ Thu  24-Sep-20,13:18,0:02:00,,us-great-wu,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1600971761017100,,,,,,,
+ Thu  24-Sep-20,17:05,0:02:00,,us-hardcore-hopper,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1600992044038000,,,,,,,
+ Thu  24-Sep-20,6:47,0:45:00,,us-serene-lalande,Insert Worker Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1600955279007100,,,,,,,
+ Thu  24-Sep-20,15:33,0:02:00,,us-silly-maxwell,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1600986808034400,,,,,,,
+ Thu  24-Sep-20,14:22,0:02:00,,us-sweet-edison,Unknown,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1600989726037200,,,,,,,
+ Wed  23-Sep-20,23:28,1:29:00,,production,Query Errors,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1600928958000700?thread_ts=1600928919.000600&cid=CLYGH35M0,,,,,,,Ancestry
+ Wed  23-Sep-20,19:45,0:30:00,,production,Production Query SLO,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1600915556044900,,,,,,,
+ Wed  23-Sep-20,17:23,0:37:00,,production,Production Query SLO,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1600907018032200,,,,,,,
+ Wed  23-Sep-20,13:44,0:05:00,,us-quirky-vaughn (staging),Jetty Threadpool Exhaustion,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1600893879029700,,,,,,,
+ Wed  23-Sep-20,7:11,0:40:00,,us-silly-maxwell,Jetty Threadpool Exhaustion,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1600870293014800,,,,,,,Looks to have been debugging going on by other engineers :-(
+ Wed  23-Sep-20,6:57,0:40:00,,us-silly-maxwell,Live Query Worker,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1600864844008800,,,,,,,
+ Tue  22-Sep-20,11:44,0:02:00,,production,Kafka Consumer Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1600800296009200,,,,,,,
+ Tue  22-Sep-20,21:26,0:20:00,,us-pensive-borg,Insert Worker Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1600835174008300,,,,,,,
+ Tue  22-Sep-20,19:52,0:10:00,,us-pensive-borg,Query Errors,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1600829575007400,,,,,,,Whatever was happening in the ER set this off for Zac
+ Tue  22-Sep-20,15:18,2:00:00,,us-quirky-vaughn (staging),Jetty Threadpool Exhaustion,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1600813111012300,,,,,,,
+ Tue  22-Sep-20,7:05,0:15:00,,us-romantic-raman,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1600783508007700,,,,,,,
+ Tue  22-Sep-20,15:37,0:20:00,,us-sweet-edison,Low Throughput ,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1600814244019800,,,,,,,"SE was already drained, not sure why we'd get alerts on a dead cell"
+ Mon  21-Sep-20,22:50,2:00:00,,us-great-wu,Insert Worker Error,No,,https://newrelic.slack.com/archives/C0STV9GSU/p1600754041273600,,,,sev2,,,
+ Mon  21-Sep-20,22:48,0:02:00,,us-great-wu,Insert Worker Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1600753683005300,,,,,,,evac'ed partition 10
+ Thu  17-Sep-20,9:54,0:02:00,,us-pensive-borg,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1600361677042000,,,,,,,
+ Thu  17-Sep-20,15:38,,,us-quirky-vaughn (staging),Jetty Threadpool Exhaustion,,,,,,,,,,
+ Wed  16-Sep-20,6:59,0:02:00,,us-pensive-borg,Insert Worker Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1600264761028000,,,,,,,
+ Tue  15-Sep-20,7:38,1:00:00,,us-quirky-vaughn (staging),Insert Worker Lag,No,,,,,,sev5,,,
+ Tue  15-Sep-20,7:10,1:30:00,,us-quirky-vaughn (staging),Insert Worker Error,No,,,,,,,,,
+ Mon  14-Sep-20,14:55,,,us-old-dream,Insert Worker Lag,No,,https://newrelic.slack.com/archives/CLYGH35M0/p1600120513006500,,,,sev4,,,
+ Thu  10-Sep-20,1:56,0:02:00,,us-silly-maxwell,Insert Worker Error,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1599728174253900,,,,,,,
+ Wed  09-Sep-20,17:47,0:02:00,,us-quirky-vaughn (staging),Jetty Threadpool Exhaustion,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1599698835248600,,,,,,,
+ Wed  09-Sep-20,15:41,0:04:00,,us-quirky-vaughn (staging),Jetty Threadpool Exhaustion,,,https://newrelic.slack.com/archives/CLYGH35M0/p1599691305243700,,,,,,,self-resolved
+ Wed  09-Sep-20,17:40,0:03:00,,us-silly-maxwell,Ingest Lag,Yes,,https://newrelic.slack.com/archives/CLYGH35M0/p1599698400247300,,,,,,,
+ Tue  08-Sep-20,17:45,0:30:00,,us-musing-saha,Insert Worker Lag,,,https://newrelic.slack.com/archives/CLYGH35M0/p1599612415208300,,,,,,,
+ Tue  08-Sep-20,18:16,0:30:00,,us-serene-lalande,Insert Worker Lag,,,https://newrelic.slack.com/archives/CLYGH35M0/p1599612415208300,,,,,,,
+ Tue  08-Sep-20,17:54,0:30:00,,us-silly-maxwell,Insert Worker Lag,,,https://newrelic.slack.com/archives/CLYGH35M0/p1599612415208300,,,,,,,
+ Tue  08-Sep-20,2:20,1:40:00,,us-sweet-edison,Query Errors,,,https://newrelic.slack.com/archives/C0STV9GSU/p1599556880234500,,,,sev3,,,anscestry: dropped multiplier from 110 to 55
+ Sat  05-Sep-20,9:35,0:02:00,,us-old-dream,Insert Worker Lag,,,https://newrelic.slack.com/archives/CLYGH35M0/p1599323705125400,,,,,,,
+ Tue  01-Sep-20,13:44,0:01:00,,production,Insert Worker Lag,,,https://newrelic.slack.com/archives/CLYGH35M0/p1598993089098800,,,,,,,
+ Tue  01-Sep-20,16:51,0:01:00,,us-serene-lalande,Query Worker Violations,,,https://newrelic.slack.com/archives/CLYGH35M0/p1599004301100100,,,,,,,
+ Tue  01-Sep-20,10:43,0:20:00,,us-tiny-ghost,Insert Worker Lag,,,https://newrelic.slack.com/archives/CLYGH35M0/p1598981379091300,,,,,,,"also in old-dream, both from infra migration"
+ Mon  31-Aug-20,10:03,1:30:00,,us-musing-saha,Query Errors,,,https://newrelic.slack.com/archives/CLYGH35M0/p1598893387081700,,,,,,,
+ Sat  29-Aug-20,8:18,0:02:00,,us-pensive-borg,Insert Worker Lag,,,,,,,,,,Account 2205685 generating traffic
+ Fri  28-Aug-20,11:14,0:01:00,,production,EU SQS Reader Errors,,,,,,,,,,IBM confirmed they were having issues
+ Fri  28-Aug-20,9:11,0:09:00,,us-great-wu,Insert Worker Lag,,,,,,,,,,
+ Fri  28-Aug-20,14:58,1:30:00,,us-great-wu,Insert Worker Lag,,,,,,,,,,"Orthagonal ER, account 1511127 generating traffic"
+ Thu  27-Aug-20,12:37,0:30:00,,production,Production Query SLO,,,,,,,,,,
+ Thu  27-Aug-20,14:42,1:09:00,,us-hardcore-hopper,Insert Worker Lag,,,,,,,,,,
+ Wed  26-Aug-20,17:03,1:00:00,,us-peaceful-gauss (staging),Insert Worker Lag,,,,,,,,,,No great notes in pager channel from Ben on how we ended up
+ Tue  25-Aug-20,8:56,0:05:00,,us-romantic-raman,Insert Worker Lag,,,,,,,none,,,Dream 11 Load Testing
+ Tue  25-Aug-20,16:57,0:01:00,,us-silly-maxwell,Insert Worker Lag,,,,,,,,,,
+ Mon  24-Aug-20,15:41,0:10:00,,production,Deserializing Null Batches,,,,,,,none,,,Unknown resolution (Ben Gawel)
+ Mon  24-Aug-20,14:24,0:20:00,,us-musing-saha,Insert Worker Lag,,,,,,,none,,,Maybe caused by deployment
+ Sun  23-Aug-20,10:53,2:00:00,,us-pensive-borg,Insert Worker Lag,,,,,10476,,sev3,,,Dream 11 Load Testing
+ Sat  22-Aug-20,10:45,0:13:00,,us-quirky-vaughn (staging),Insert Worker Lag,,,,,,,none,,,

@@ -1,5 +1,5 @@
 import { readFileSync } from 'fs';
-import * as _ from 'lodash'; // lodash has no default export
+import _ from 'lodash'; // lodash has no default export
 import { Interface } from 'readline';
 
 // TODO: create a generic type for `converters.colName`
@@ -66,10 +66,3 @@ function loadCSV(filename: string, options?: Options): void {
 
   console.log('headers: ', headers, 'csvArrays: ', csvArrays);
 }
-
-loadCSV('./data/data.csv', {
-  converters: {
-    passed: (val) => (val === 'TRUE' ? 'yes' : 'no'),
-    height: (val) => val + 1.01,
-  },
-});
